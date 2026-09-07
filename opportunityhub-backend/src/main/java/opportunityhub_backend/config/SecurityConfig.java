@@ -35,27 +35,26 @@ public class SecurityConfig {
 
         CorsConfiguration configuration = new CorsConfiguration();
 
-        configuration.setAllowedOrigins(
-                List.of("http://localhost:5173")
-        );
+        configuration.setAllowedOrigins(List.of(
+                "http://localhost:5173",
+                "https://opportunityhub-frontend.onrender.com"
+        ));
 
-        configuration.setAllowedMethods(
-                List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")
-        );
+        configuration.setAllowedMethods(List.of(
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE",
+                "OPTIONS"
+        ));
 
-        configuration.setAllowedHeaders(
-                List.of("*")
-        );
-
+        configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
 
-        source.registerCorsConfiguration(
-                "/**",
-                configuration
-        );
+        source.registerCorsConfiguration("/**", configuration);
 
         return source;
     }
@@ -68,16 +67,11 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
 
                 .cors(cors ->
-                        cors.configurationSource(
-                                corsConfigurationSource()
-                        )
-                )
+                        cors.configurationSource(corsConfigurationSource()))
 
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(
-                                SessionCreationPolicy.STATELESS
-                        )
-                )
+                                SessionCreationPolicy.STATELESS))
 
                 .authorizeHttpRequests(auth -> auth
 
@@ -121,8 +115,7 @@ public class SecurityConfig {
                         .hasAnyRole("STUDENT", "ADMIN")
 
                         .anyRequest()
-                        .authenticated()
-                )
+                        .authenticated())
 
                 .addFilterBefore(
                         jwtAuthenticationFilter,
