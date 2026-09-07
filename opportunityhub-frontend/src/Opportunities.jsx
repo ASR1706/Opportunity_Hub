@@ -36,7 +36,7 @@ function Opportunities() {
                     localStorage.getItem("token");
 
                 const response = await fetch(
-                    "http://localhost:8080/api/opportunities",
+                    "https://opportunityhub-backend-shiw.onrender.com/api/opportunities",
                     {
                         method: "GET",
                         headers: token
@@ -112,7 +112,7 @@ function Opportunities() {
 
                 const response =
                     await fetch(
-                        `http://localhost:8080/api/saved/${userId}`,
+                        `https://opportunityhub-backend-shiw.onrender.com/api/saved/${userId}`,
                         {
                             method: "GET",
                             headers: new Headers({
@@ -287,7 +287,7 @@ function Opportunities() {
 
         try {
             const response = await fetch(
-                `http://localhost:8080/api/applications/${userId}/${opportunity.id}`,
+                `https://opportunityhub-backend-shiw.onrender.com/api/applications/${userId}/${opportunity.id}`,
                 {
                     method: "POST",
                     headers: {
@@ -364,7 +364,7 @@ function Opportunities() {
 
                 const response =
                     await fetch(
-                        `http://localhost:8080/api/saved/${userId}/${opportunity.id}`,
+                        `https://opportunityhub-backend-shiw.onrender.com/api/saved/${userId}/${opportunity.id}`,
                         {
                             method: "POST",
                             headers: new Headers({

@@ -30,7 +30,7 @@ function Applications() {
                 setError("");
 
                 const response = await fetch(
-                    `http://localhost:8080/api/applications/user/${userId}`,
+                    `https://opportunityhub-backend-shiw.onrender.com/api/applications/user/${userId}`,
                     {
                         method: "GET",
                         headers: {
@@ -188,7 +188,7 @@ function Applications() {
             setDeletingId(applicationId);
 
             const response = await fetch(
-                `http://localhost:8080/api/applications/${applicationId}`,
+                `https://opportunityhub-backend-shiw.onrender.com/api/applications/${applicationId}`,
                 {
                     method: "DELETE",
                     headers: {

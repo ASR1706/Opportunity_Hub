@@ -40,7 +40,7 @@ function Profile() {
 
             try {
                 const response = await fetch(
-                    `http://localhost:8080/api/profile/${userId}`,
+                    `https://opportunityhub-backend-shiw.onrender.com/api/profile/${userId}`,
                     {
                         method: "GET",
                         headers: {
@@ -125,7 +125,7 @@ function Profile() {
             const method = exists ? "PUT" : "POST";
 
             const response = await fetch(
-                `http://localhost:8080/api/profile/${userId}`,
+                `https://opportunityhub-backend-shiw.onrender.com/api/profile/${userId}`,
                 {
                     method,
                     headers: {

@@ -29,7 +29,7 @@ function DeadlineAlerts() {
                 }
 
                 const response = await fetch(
-                    "http://localhost:8080/api/deadlines",
+                    "https://opportunityhub-backend-shiw.onrender.com/api/deadlines",
                     {
                         method: "GET",
                         headers: {
@@ -197,7 +197,7 @@ function DeadlineAlerts() {
 
         try {
             const response = await fetch(
-                `http://localhost:8080/api/applications/${userId}/${opportunity.id}`,
+                `https://opportunityhub-backend-shiw.onrender.com/api/applications/${userId}/${opportunity.id}`,
                 {
                     method: "POST",
                     headers: {

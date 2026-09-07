@@ -39,7 +39,7 @@ function Dashboard() {
                 const [dashboardResponse, opportunitiesResponse] =
                     await Promise.all([
                         fetch(
-                            `http://localhost:8080/api/dashboard/${userId}`,
+                            `https://opportunityhub-backend-shiw.onrender.com/api/dashboard/${userId}`,
                             {
                                 method: "GET",
                                 headers: {
@@ -50,7 +50,7 @@ function Dashboard() {
                         ),
 
                         fetch(
-                            "http://localhost:8080/api/opportunities",
+                            "https://opportunityhub-backend-shiw.onrender.com/api/opportunities",
                             {
                                 method: "GET",
                                 headers: {
@@ -261,7 +261,7 @@ function Dashboard() {
 
         try {
             const response = await fetch(
-                `http://localhost:8080/api/applications/${userId}/${opportunity.id}`,
+                `https://opportunityhub-backend-shiw.onrender.com/api/applications/${userId}/${opportunity.id}`,
                 {
                     method: "POST",
                     headers: {

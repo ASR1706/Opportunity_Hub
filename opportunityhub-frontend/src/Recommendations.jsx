@@ -30,7 +30,7 @@ function Recommendations() {
                 }
 
                 const response = await fetch(
-                    `http://localhost:8080/api/recommendations/${userId}`,
+                    `https://opportunityhub-backend-shiw.onrender.com/api/recommendations/${userId}`,
                     {
                         method: "GET",
                         headers: {
@@ -164,7 +164,7 @@ function Recommendations() {
 
         try {
             const response = await fetch(
-                `http://localhost:8080/api/applications/${userId}/${opportunity.id}`,
+                `https://opportunityhub-backend-shiw.onrender.com/api/applications/${userId}/${opportunity.id}`,
                 {
                     method: "POST",
                     headers: {

@@ -44,8 +44,8 @@ function App() {
     }
 
     const url = isLogin
-        ? "http://localhost:8080/api/auth/login"
-        : "http://localhost:8080/api/auth/register";
+        ? "https://opportunityhub-backend-shiw.onrender.com/api/auth/login"
+        : "https://opportunityhub-backend-shiw.onrender.com/api/auth/register";
 
     const data = isLogin
         ? { email, password }

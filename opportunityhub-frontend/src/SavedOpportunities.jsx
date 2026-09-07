@@ -29,7 +29,7 @@ function SavedOpportunities() {
             setError("");
 
             const response = await fetch(
-                `http://localhost:8080/api/saved/${userId}`,
+                `https://opportunityhub-backend-shiw.onrender.com/api/saved/${userId}`,
                 {
                     method: "GET",
                     headers: {
@@ -157,7 +157,7 @@ function SavedOpportunities() {
             setRemovingId(opportunityId);
 
             const response = await fetch(
-                `http://localhost:8080/api/saved/${userId}/${opportunityId}`,
+                `https://opportunityhub-backend-shiw.onrender.com/api/saved/${userId}/${opportunityId}`,
                 {
                     method: "DELETE",
                     headers: {
@@ -220,7 +220,7 @@ function SavedOpportunities() {
             setApplyingId(opportunity.id);
 
             const response = await fetch(
-                `http://localhost:8080/api/applications/${userId}/${opportunity.id}`,
+                `https://opportunityhub-backend-shiw.onrender.com/api/applications/${userId}/${opportunity.id}`,
                 {
                     method: "POST",
                     headers: {
